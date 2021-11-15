@@ -1,0 +1,41 @@
+{% extends 'base/base.html'%}
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    {% from "_macro.html" import render_field %}
+
+    <form name="sentMessage" id="contactForm" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <div class="Content_Forms">
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        {{ render_field(form.comment)}}
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        {{ render_field(form.honeypot)}}
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="sendBtn btn btn-default"> Send </button>
+                    </div>
+                </div>
+                <br>
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <p>&copy; Curso flask 2021</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

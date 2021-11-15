@@ -1,0 +1,33 @@
+{% extends 'base/base.html'%}
+{% block title %} Review {% endblock %}
+{% block content %}
+
+    <div class="Content_Forms">
+      <div>
+        <h3 class="Titulo">Comentarios:</h3>
+        <br />
+        {% if comments %}
+          {% for comment in comments.items %}
+            <div>
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <hr>
+                <p id="username">{{ comment.username }}</p>
+                <p id="comentarios"> {{ comment.text }} </p>
+                <p id="fecha">{{ date_format(comment.created_date) }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <div class="Btn_Paginas">
+        <a href="/reviews/{{current_page-1}}" class="sendBtn btn btn-default">
+          Anterior
+        </a>
+        <a href="/reviews/{{current_page+1}}" class="sendBtn btn btn-default">
+          Siguiente
+        </a>
+      </div>
+    </div>
+
+{% endblock %}

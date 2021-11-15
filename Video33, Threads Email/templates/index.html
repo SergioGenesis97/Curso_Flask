@@ -1,0 +1,15 @@
+{% extends 'base/base.html'%}
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    {% from "_macro.html" import render_field %}
+
+<div>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    <div id="Error_Message">
+        <h1>Curso Flask</h1>
+        <h5>&copy; Curso flask 2021</h5>
+    </div>
+</div>
+
+{% endblock %}
