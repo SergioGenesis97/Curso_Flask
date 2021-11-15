@@ -1,0 +1,22 @@
+{% extends 'base/base.html'%}
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    {% from "_macro.html" import render_field %}
+
+    <form name="sentMessage" id="contactForm" method="POST">
+    <div class="row_control">
+                {{ render_field(form.username)}}
+    </div>
+    <div class="row_control">
+               {{ render_field(form.email)}}
+    </div>
+    <div class="row_control">
+                {{ render_field(form.comment)}}
+    </div>
+        <div>
+                <button type="submit" class="sendBtn"> Send </button>
+        </div>
+    </form>
+
+{% endblock %}
