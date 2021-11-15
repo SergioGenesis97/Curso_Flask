@@ -1,0 +1,89 @@
+*{margin: 0; padding: 0}
+
+body{
+    background-image: url("../img/skys.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Ghost{
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 14px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+.Content_Img{
+    padding-left: 40%;
+}
+
+.Content_Login{
+    padding-bottom: 1%;
+    padding-top: 2%;
+}
+
+.FootContainer{
+    margin-top: 10%;
+    padding-top: 5%;
+    padding-left: 20%;
+    opacity: .5;
+    background-color: rgb(0, 0, 0);
+}
+
+.Content_Forms{
+    width: 20%;
+    margin-left: 41%;
+    color: aliceblue;
+    font-family: Arial;
+    padding: 2%;
+    opacity: .5;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 14px rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+}
+
+.Content_Login button{
+    margin-top: 4%;
+}
+
+.sendBtn{
+    width: 80px;
+    height: 33px;
+    background-color: darkred;
+    color: whitesmoke;
+}
+
+.sendBtn:hover{
+    background-color: #018f01;
+    color: black;
+}
+
+.sendBtn:active{
+    background-color: #014b01;
+    color: black;
+}
+
+.FootContainer p{
+    font-family: Arial;
+    color: aliceblue;
+    font-size: large;
+    margin-top: -4%;
+}
+
+#Code{
+    font-family: Arial;
+    color: aliceblue;
+    font-size: large;
+    margin-top: -4%;
+    margin-right: 20%;
+    text-align: right;
+}
+
+.Titulo_page{
+    font-family: Arial;
+    color: aliceblue;
+    padding-left: 46%;
+    padding-top: 5%;
+}
